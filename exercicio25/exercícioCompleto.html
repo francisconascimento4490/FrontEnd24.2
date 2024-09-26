@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de JavaScript</h1>
+
+    <!-- Exercício 1: Verificar Nota -->
+    <h2>1. Verificar Nota</h2>
+    <input type="number" id="nota" placeholder="Sua nota">
+    <button onclick="verificarNota()">Verificar</button>
+    <p id="resultadoNota"></p>
+
+    <!-- Exercício 2: Par ou Ímpar -->
+    <h2>2. Verificar Par ou Ímpar</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="verificarParImpar()">Verificar</button>
+    <p id="resultadoNumero"></p>
+
+    <!-- Exercício 3: Verificar Idade -->
+    <h2>3. Verificar Idade</h2>
+    <input type="number" id="idade" placeholder="Sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+    <p id="resultadoIdade"></p>
+
+    <!-- Exercício 4: Verificar Habilidade no Array -->
+    <h2>4. Verificar Habilidade</h2>
+    <p>Habilidades disponíveis: "HTML", "CSS", "Javascript"</p>
+    <button onclick="verificarHabilidade()">Verificar se possui 'Javascript'</button>
+    <p id="resultadoHabilidade"></p>
+
+    <script>
+        // Exercício 1: Verificar Nota
+        function verificarNota() {
+            var nota = document.getElementById("nota").value;
+            var resultado = document.getElementById("resultadoNota");
+
+            if (nota >= 60) {
+                resultado.innerHTML = "Aprovado!";
+            } else {
+                resultado.innerHTML = "Reprovado!";
+            }
+        }
+
+        // Exercício 2: Par ou Ímpar
+        function verificarParImpar() {
+            var numero = document.getElementById("numero").value;
+            var resultado = document.getElementById("resultadoNumero");
+
+            if (numero % 2 === 0) {
+                resultado.innerHTML = "O número é par.";
+            } else {
+                resultado.innerHTML = "O número é ímpar.";
+            }
+        }
+
+        // Exercício 3: Verificar Idade
+        function verificarIdade() {
+            var idade = document.getElementById("idade").value;
+            var resultado = document.getElementById("resultadoIdade");
+
+            if (idade >= 18) {
+                resultado.innerHTML = "Você pode acessar o site.";
+            } else {
+                resultado.innerHTML = "Você não pode acessar o site.";
+            }
+        }
+
+        // Exercício 4: Verificar Habilidade no Array
+        function verificarHabilidade() {
+            var habilidades = ["HTML", "CSS", "Javascript"];
+            var resultado = document.getElementById("resultadoHabilidade");
+
+            if (habilidades.includes("Javascript")) {
+                resultado.innerHTML = "A habilidade 'Javascript' está presente no array.";
+            } else {
+                resultado.innerHTML = "A habilidade 'Javascript' não está presente no array.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-top: 15px;
+        }
+        li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    
+    <!-- Campo de entrada para o nome do item -->
+    <input type="text" id="itemInput" placeholder="Digite o nome do item">
+    
+    <!-- Botão para adicionar o item à lista -->
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    
+    <!-- Exibe a lista de compras atualizada -->
+    <h2>Itens da Lista:</h2>
+    <ul id="listaDeCompras"></ul>
+
+    <script>
+        // Função para adicionar um item à lista
+        function adicionarItem() {
+            // Pega o valor do campo de entrada
+            var item = document.getElementById("itemInput").value;
+
+            // Verifica se o campo está vazio
+            if (item === "") {
+                alert("Por favor, insira o nome de um item.");
+                return;
+            }
+
+            // Cria um novo elemento <li> e insere o texto do item
+            var li = document.createElement("li");
+            li.textContent = item;
+
+            // Adiciona o novo item à lista de compras
+            document.getElementById("listaDeCompras").appendChild(li);
+
+            // Limpa o campo de entrada após adicionar o item
+            document.getElementById("itemInput").value = "";
+        }
+    </script>
+</body>
+</html>

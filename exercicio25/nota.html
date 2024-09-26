@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Prova</title>
+</head>
+<body>
+    <h1>Insira sua Nota</h1>
+    <input type="number" id="nota" placeholder="Sua nota">
+    <button onclick="verificarNota()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNota() {
+            var nota = document.getElementById("nota").value;
+            var resultado = document.getElementById("resultado");
+
+            if (nota >= 60) {
+                resultado.innerHTML = "Aprovado!";
+            } else {
+                resultado.innerHTML = "Reprovado!";
+            }
+        }
+    </script>
+</body>
+</html>
